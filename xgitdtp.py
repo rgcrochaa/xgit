@@ -10,4 +10,7 @@ if os.path.exists(arquivo):
     print ("arquivo existe")
 else:
         print ("arquivo n existe")
+        
+
+        
     
