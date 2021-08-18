@@ -1,0 +1,12 @@
+Após executar o Gitstat, armazenar os arquivos em HTML em uma pasta. 
+Converter os arquivos em HTML para txt utilizando o site conversor https://convertio.co/pt/html-txt/
+Pedir o nome da TAG como entrada de dados
+Criar uma função para verficar se o arquivo existe ou não
+Criar uma função que crie um arquivo, caso ele não exista para armazenar os dados extraídos
+Criar uma função que leia o arquivo txt, para vizualizar e extrair dados
+Criar uma função que adicione os dados extraídos em um arquivo de texto txt
+ACESSO AS FUNÇÕES
+Criamos um laço de repetição 
+Com um menu simples que direcionariam a cada função
+
+
