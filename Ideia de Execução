@@ -1,12 +1,59 @@
+'''
 Após executar o Gitstat, armazenar os arquivos em HTML em uma pasta. 
 Converter os arquivos em HTML para txt utilizando o site conversor https://convertio.co/pt/html-txt/
-Pedir o nome da TAG como entrada de dados
-Criar uma função para verficar se o arquivo existe ou não
-Criar uma função que crie um arquivo, caso ele não exista para armazenar os dados extraídos
-Criar uma função que leia o arquivo txt, para vizualizar e extrair dados
-Criar uma função que adicione os dados extraídos em um arquivo de texto txt
-ACESSO AS FUNÇÕES
-Criamos um laço de repetição 
-Com um menu simples que direcionariam a cada função
+'''
+
+import os
+
+#verificando se há arquivo
+def verificar_arquivo(nome):
+    try:
+        n = open(nome, 'rt')
+        n.close()
+    except FileNotFoundError:
+        return False
+    else:
+        return True
+
+#criando arquivo caso não exista
+def armazenar_arq(nome):
+    try:
+        n = open(nome, 'wt+')
+        n.close()
+    except:
+        print("Erro, arquvio já existe!!!")
+    else:
+        print("Arquivo criado com sucesso!!!")
+
+#lendo arquivos
+def ler_arquivo(nome):
+    try:
+        n = open(nome, 'rt')
+    except:
+        print ("Erro ao ler o arquivo")
+    else:
+        print(n.read())
+    finally:
+        n.close()
+        
+
+       
+NomeTag = input("Digite o nome da Tagg: ")
+
+#verificando se o arquivo existe
+if verificar_arquivo(NomeTag):
+    print ("Arquivo Existe!!!")
+else:
+    print ("Arquivo Não Existe ;'( ")
+    armazenar_arq(NomeTag)
+
+#ler o arquivo
+while True:
+    opc = int(input("Para ler o arquivo digite 1: "))
+    if opc==1:
+        ler_arquivo(NomeTag)
+    else:
+        break
+
 
 
